@@ -1,0 +1,156 @@
+overrides:
+  -
+    files:
+      - "**/*.ts"
+      - "**/*.tsx"
+    parser: "@typescript-eslint/parser"
+
+plugins:
+  - "@typescript-eslint"
+  - immutable
+  - jest
+  - jsdoc
+  - prettier
+  - sonarjs
+  - unicorn
+
+rules:
+
+# Comments
+
+## C2: Obsolete Comment
+
+  unicorn/expiring-todo-comments: error # recommended
+
+### C4: Poorly Written Comment
+
+  jsdoc/check-alignment: error
+  jsdoc/check-examples: error
+  jsdoc/check-indentation: error
+  jsdoc/check-param-names: error
+  jsdoc/check-syntax: error
+  jsdoc/check-tag-names: error
+  jsdoc/check-types: error
+  jsdoc/implements-on-classes: error
+  jsdoc/require-description: error
+  jsdoc/require-description-complete-sentence: error
+  jsdoc/require-jsdoc: error
+  jsdoc/valid-types: error
+
+### C5: Commented-Out Code
+
+  jest/no-commented-out-tests: error # recommended
+
+## Functions
+
+### F1: Too Many Arguments
+
+  max-params: error
+
+### F2: Output Arguments
+
+  immutable/no-mutation: error # recommended
+  no-delete-var: error # recommended
+  sonarjs/no-element-overwrite: error
+
+## General
+
+### G4: Overridden Safeties
+
+  "@typescript-eslint/ban-ts-ignore": error # recommended
+  jest/no-disabled-tests: error # recommended
+  unicorn/no-abusive-eslint-disable: error # recommended
+
+### G5: Duplication
+
+  no-dupe-args: error # recommended
+  no-dupe-class-members: error # recommended
+  no-dupe-keys: error # recommended
+  no-duplicate-case: error # recommended
+  no-duplicate-imports: error
+  sonarjs/no-all-duplicated-branches: error # recommended
+  sonarjs/no-duplicate-strings: error # recommended
+  sonarjs/no-duplicated-branches: error # recommended
+  sonarjs/no-identical-conditions: error # recommended
+  sonarjs/no-identical-expressions: error # recommended
+  sonarjs/no-identical-functions: error # recommended
+
+### G9: Dead Code
+
+  "@typescript-eslint/no-unused-expressions": error
+  "@typescript-eslint/no-unused-vars": error # recommended
+  no-unreachable: error # recommended
+  no-unused-expressions: error
+  no-unused-labels: error # recommended
+  no-unused-vars: error # recommended
+  sonarjs/no-extra-arguments: error # recommended
+  sonarjs/no-redundant-jump: error # recommended
+  sonarjs/no-unused-collection: error # recommended
+  unicorn/no-unused-properties: error
+
+### G11: Inconsistency
+
+  "@typescript-eslint/consistent-type-definitions": error
+
+### G12: Clutter
+
+  "@typescript-eslint/no-empty-function": error # recommended
+  "@typescript-eslint/no-empty-interface": error # recommended
+  "@typescript-eslint/no-unnecessary-condition": error
+  "@typescript-eslint/no-unnecessary-qualifier": error
+  "@typescript-eslint/no-unnecessary-type-arguments": error
+  "@typescript-eslint/no-unnecessary-type-assertion": error # recommended
+  "@typescript-eslint/no-useless-constructor": error
+  no-empty: error # recommended
+  no-empty-character-class: error # recommended
+  no-empty-function: error
+  no-empty-pattern: error # recommended
+  no-extra-boolean-cast: error # recommended
+  no-lone-blocks: error
+  no-useless-call: error
+  no-useless-catch: error # recommended
+  no-useless-concat: error
+  no-useless-constructor: error
+  no-useless-escape: error # recommended
+  no-useless-return: error
+  sonarjs/no-one-iteration-loop: error # recommended
+  sonarjs/no-redundant-boolean: error # recommended
+  sonarjs/no-useless-catch: error # recommended
+
+### G18: Inappropriate State
+
+  class-methods-use-this: error
+
+### G24: Follow Standard Conventions
+
+  prettier/prettier: error # recommended
+
+### G25: Replace Magic Numbers with Named Constants
+
+  "@typescript-eslint/no-magic-numbers": error
+  no-magic-numbers: error
+
+### G29: Avoid Negative Conditionals
+
+  sonarjs/no-inverted-boolean-check: error # recommended
+
+### G30: Functions Should Do One Thing
+
+  complexity: error
+  max-depth: error
+  max-lines-per-function: error
+  max-nested-callbacks: error
+  max-statements: error
+  sonarjs/cognitive-complexity: error # recommended
+  sonarjs/max-switch-cases: error # recommended
+
+### G35: Keep Configurable Data at High Levels
+
+  "@typescript-eslint/member-ordering": error
+
+## Names
+
+### N3: Use Standard Nomenclature Where Possible
+
+  "@typescript-eslint/generic-type-naming": error
+  "@typescript-eslint/interface-name-prefix": error # recommended
