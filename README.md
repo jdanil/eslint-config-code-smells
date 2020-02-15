@@ -1,8 +1,8 @@
-# eslint-config-clean-code
+# eslint-config-code-smells
 
-A collection of eslint rules to enforce [clean coding](https://moderatemisbehaviour.github.io/clean-code-smells-and-heuristics/) conventions.
+A collection of ESLint rules to enforce [clean coding](https://moderatemisbehaviour.github.io/clean-code-smells-and-heuristics/) conventions.
 
-This configuration is a demonstration of how eslint can be used to automate enforcement of some rules.
+This configuration is a demonstration of how ESLint can be used to automate enforcement of some rules.
 The configuration represents a subset of rules from some eslint plugins;
 it is still suggested to use the plugins directly and their recommended rules.
 
@@ -11,14 +11,14 @@ it is still suggested to use the plugins directly and their recommended rules.
 install
 
 ```bash
-yarn add https://github.com/jdanil/eslint-config-clean-code.git#master
+yarn install --save-dev eslint-config-code-smells
 ```
 
 eslint config
 
 ```yaml
 extends:
-  - eslint-config-clean-code
+  - code-smells
 parserOptions:
   project: ./tsconfig.json # if using typescript
 ```

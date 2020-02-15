@@ -1,20 +1,37 @@
 {
-  "name": "eslint-config-clean-code",
+  "name": "eslint-config-code-smells",
   "description": "ESLint Rules to Enforce Clean Code",
   "version": "0.1.0",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "index.yaml",
+  "files": ["**/*.yaml"],
+  "keywords": [
+    "clean",
+    "code",
+    "config",
+    "eslint",
+    "heuristics",
+    "smells"
+  ],
   "peerDependencies": {
+    "@typescript-eslint/parser": "^2.19.2",
     "eslint": ">=6",
     "prettier": ">=1.19.1"
   },
+  "peerDependenciesMeta": {
+    "@typescript-eslint/parser": {
+      "optional": true
+    }
+  },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.7.0",
-    "eslint-plugin-immutable": "^1.0.0",
-    "eslint-plugin-jest": "^23.0.3",
-    "eslint-plugin-jsdoc": "^18.0.0",
-    "eslint-plugin-prettier": "^3.1.1",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-functional": "^3.0.1",
+    "eslint-plugin-jest": "^23.7.0",
+    "eslint-plugin-jsdoc": "^21.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-sonarjs": "^0.5.0",
-    "eslint-plugin-unicorn": "^12.1.0"
+    "eslint-plugin-tsdoc": "^0.2.1",
+    "eslint-plugin-unicorn": "^16.1.1"
   }
 }
